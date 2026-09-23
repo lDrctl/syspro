@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "copy.h"
-
+//good!
 char line[MAXLINE]; 
 char longest[MAXLINE]; 
 
