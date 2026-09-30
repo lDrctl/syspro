@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+    FILE *fp;
+    int c;
+
+    if (argc < 2) {
+        fp = stdin;
+    } 
+    else {
+        fp = fopen(argv[1], "r");
+        if (fp == NULL) {
+            printf("error\n");
+            return 1;
+        }
+    }
+    c = getc(fp);
+    while (c != EOF) {
+        putc(c, stdout);
+        c = getc(fp);
+    }
+    
+    fclose(fp);
+    return 0;
+}
