@@ -20,9 +20,8 @@ main(int argc, char *argv[])
       perror(argv[2]);
       exit(3); 
    }
-
    while ((n = read(fd1, buf, BUFSIZ)) > 0) 
-      write(fd2, buf, n);   // 읽은 내용을 쓴다.
+      write(fd2, buf, n);  
    exit(0); 
 }
 
